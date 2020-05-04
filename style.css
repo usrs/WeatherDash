@@ -1,0 +1,10 @@
+header {
+ padding: 10px;
+ text-align: center;
+ color: white;
+ background-color: navy;
+}
+
+li {
+ text-align: center;
+}
