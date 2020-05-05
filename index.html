@@ -15,74 +15,32 @@
  <div class="row">
   <div class="col-3">
    <form class="form-inline">
-    <input type="search" class="form-control mr-sm-2">
-    <button class="btn btn-outline-primary my-2 my sm-0">🔎</button>
+    <input id="search" type="search" class="form-control mr-sm-2">
+    <button id="searchBtn" class="btn btn-outline-primary my-2 my sm-0">🔎</button>
    </form>
    <ul id="history" class="list-group my-2 mr-sm-2">
-    <li class="list-group-item col-10">Search History Goes Here</li>
-    <li class="list-group-item col-10">Search History Goes Here</li>
-    <li class="list-group-item col-10">Search History Goes Here</li>
-    <li class="list-group-item col-10">Search History Goes Here</li>
-    <li class="list-group-item col-10">Search History Goes Here</li>
-    <li class="list-group-item col-10">Search History Goes Here</li>
    </ul>
   </div>
   <div class="col-9">
    <div class="row my-2 mr-sm-2">
-    <div class="jumbotron">
-     <h1 class="display-4">Hello, world!</h1>
-     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-      content or information.</p>
-     <hr class="my-4">
-     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div class="jumbotron col-12">
+     <h1 id="city" class="display-4 my-4">City Name & Date</h1>
+     <p id="temp"class="lead">Temperature: </p>
+     <p id="humidity" class="my-4">Humidity:</p>
+     <p id="wind">Wind Speed:</p>
+    <p id="uv"class="my-4">UV Index:</p>
     </div>
    </div>
-   <div class="row">
+   <div id="cardRow" class="row">
     <div class="card col-sm-2 mr-sm-2" >
-     <img src="..." class="card-img-top" alt="...">
      <div class="card-body">
       <h5 class="card-title">Card title</h5>
+      <img src="cat.jpg" class="card-img-top" alt="...">
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
       </p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
      </div>
     </div>
-    <div class="card col-sm-2 mr-sm-2">
-     <img src="..." class="card-img-top" alt="...">
-     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
-    </div>
-    <div class="card col-sm-2 mr-sm-2">
-     <img src="..." class="card-img-top" alt="...">
-     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
-    </div>
-    <div class="card col-sm-2 mr-sm-2">
-     <img src="..." class="card-img-top" alt="...">
-     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
-    </div>
-    <div class="card col-sm-2 mr-sm-2">
-     <img src="..." class="card-img-top" alt="...">
-     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-     </div>
     </div>
    </div>
   </div>
@@ -95,23 +53,6 @@
  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
- <script>
-  //declare location position and other variables that will be stored later in the program
-  let lat = 0
-  let lon = 0
-
-  navigator.geolocation.getCurrentPosition(position => {
-   let lat = position.coords.latitude
-   let lon = position.coords.longitude
-   console.log(lat)
-   console.log(lon)
-  })
-
-  fetch (`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly&appid=2260330a175994e3a7136d694876386f`)
-   .then( displayWeather => {
-
-   })
-  //openweather api key: 2260330a175994e3a7136d694876386f
- </script>
+ <script src="script.js"></script>
 </body>
 </html>
